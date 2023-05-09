@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta htt-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="styles/profile-styles.css">
+    <script src="https://kit.fontawesome.com/ce507a1bf8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul id="sidemenu">
+                    <i class="fa-solid fa-times" onclick="closeMenu()"></i>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="links.html">Links</a></li>              
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Nayan Pai</p>
+    
+            </div>
+        </div>
+    </div>
+    <!-- ---------------Tabs & Content------------------ -->
+    <div id="content">
+        <div class="container">
+            <h1 class="sub-title">Profile</h1>
+            <div class="row">
+                <div class="content-photo">
+                    <img src="styles/images/user.png">
+                </div>
+                <div class="content-text">
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('projects')">Projects</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Python</span></li>
+                            <li><span>C++</span></li>
+                            <li><span>Java</span></li>
+                            <li><span>HTML</span></li>
+                            <li><span>CSS</span></li>
+                            <li><span>JavaScript</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Grad. 2018</span><br>High School from DPS Bangalore East</li>
+                            <li><span>Current</span><br>B.S. in Computer Science at CSU East Bay</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="projects">
+                        <ul>
+                            <li><span>Chatbot</span><br>Created a functioning chatbot using Python.</li>
+                            <li><span>Game Developmment (C++)</span><br>Created Multiple shooter and puzzle/escape games in C++ and Unreal Engine 4</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+       
+       var tablinks = document.getElementsByClassName("tab-links");
+       var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openMenu(){
+            sidemenu.style.right = "0";
+        }
+
+        function closeMenu(){
+            sidemenu.style.right = "-200px";
+        }
+       
+    </script>
+</body>
+</html>

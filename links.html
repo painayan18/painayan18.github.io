@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta htt-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <link rel="stylesheet" href="styles/links-styles.css">
+    <script src="https://kit.fontawesome.com/ce507a1bf8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul id="sidemenu">
+                    <i class="fa-solid fa-times" onclick="closeMenu()"></i>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="links.html">Links</a></li>              
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Nayan Pai</p>
+    
+            </div>
+        </div>
+    </div>
+    <!-- ---------------contact info------------------ -->
+    <div id="links">
+        <div class="container">
+            <h1 class="sub-title">Links</h1>
+            <div class="links-list">
+                <div>
+                    <i class="fa-brands fa-github fa-2xl"></i>
+                    <h2>GitHub</h2>
+                    <p>painayan18</p>
+                    <a href = "https://github.com/painayan18">Visit  <i2 class="fa-solid fa-square-up-right"></i></a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-linkedin fa-2xl"></i>
+                    <h2>LinkedIn</h2>
+                    <p>Nayan Pai</p>
+                    <a href = "https://www.linkedin.com/in/nayan-pai-0a56b51b6/">Visit  <i2 class="fa-solid fa-square-up-right"></i></a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-discord fa-2xl"></i>
+                    <h2>Discord</h2>
+                    <p>Phantom#1111</p>
+                    <a href = "https://discord.com/users/143371911395540993">Visit  <i2 class="fa-solid fa-square-up-right"></i></a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-instagram fa-2xl"></i>
+                    <h2>Instagram</h2>
+                    <p>nayanpai18</p>
+                    <a href = "https://www.instagram.com/nayanpai18/?hl=en">Visit  <i2 class="fa-solid fa-square-up-right"></i></a>
+                </div>
+            </div>
+            <div>
+                <br><br>
+                <h3>Or contact me at: <a href = "mailto:npai@horizon.csueastbay.edu">npai@horizon.csueastbay.edu  <i2 class="fa-solid fa-square-up-right"></i></a></h3>
+            </div>
+        </div>
+  </div>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openMenu(){
+            sidemenu.style.right = "0";
+        }
+
+        function closeMenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+    
+</body>
+</html>
