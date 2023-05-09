@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu';
+    box-sizing: border-box;
+}
+
+body {
+    background: #080808;
+    color: #fff;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/background.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.container{
+    padding: 100px 10%;
+}
+
+.header-text{
+    margin: top 20%;
+    font-size: 24px;
+}
+
+.header-text h1{
+    font-size: 100px;
+    margin-top: 20px;
+}
+
+h2{
+    font-size: 24px;
+    margin-right: -200px;
+}
+
+ul li{
+    display: list-item;
+    list-style: none;
+    margin: 100px 20px;
+}
+
+ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 48px;
+    position: relative;
+}
+
+ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #2074f3;
+
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.1s
+}
+
+ul li a:hover::after{
+    width: 100%;
+}
+
+
+
+/* ------------bio-------------- */
+
+#bio{
+    padding: 80px 0;
+    color: #ababab;
+}
+
+.row{
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+}
+
+.introduction{
+    flex-basis: 60%;
+}
+
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.1s;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span{
+    color: #ff004f;
+    font-size: 14px;
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
+
+/* --------- small screens---------- */
+
+@media only screen and (max-width: 600px) {
+    #header{
+        background-image: linear-gradient(rgba(29, 34, 54, 0.7), rgba(52, 58, 82, 0.7)), url(images/phonebkgrd.png);
+    }
+    
+    .container{
+        padding-top: 50px;
+        padding-left: 20px;
+    }
+    
+
+    .header-text{
+        font-size: 24px;
+    }
+    
+    .header-text h1{
+        padding: -50px, 20px;
+        font-size: 50px;
+    }
+
+    .sub-title{
+        padding-left: -150px;
+    }
+
+    h2{
+        padding-top: 20px;
+        font-size: 18px;
+        margin-right: 0;
+    }
+}
